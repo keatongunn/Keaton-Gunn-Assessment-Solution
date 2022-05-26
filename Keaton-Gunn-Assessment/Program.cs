@@ -152,4 +152,5 @@ public enum TicketStatus
         // sla.ResponseDeadline = 5 (Priority) * 2 (Bug ReportBase)
  * Add an abstract class calculation context so the calculation will be implemented on run-time, then context for both ServiceRequest and Bug report that inherit from Calculation context to implement.
  * Use the add on decorator design pattern to add another layer of modification to ServiceRequest. For example, add abstract class ServiceDecorator : ServiceRequest, that holds a service request object, then for each type of service request (the new enum property) make use of a decorator. Eg. ComputerOnFireDecorator : ServiceDecorator would add the hours needed to extinguish the flames to the breach deadline. 
+ */ 
 
