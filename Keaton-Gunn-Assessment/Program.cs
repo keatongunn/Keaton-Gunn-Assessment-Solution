@@ -47,7 +47,7 @@ public interface CalculationStrategy //NEW
 
 }
 
-public class BugReportStrategy : CalculationStrategy
+public class BugReportStrategy : CalculationStrategy //NEW
 {
     public void ResponseDeadline(TicketPriority ticketPriority, ServiceLevelAgreement sla)
     {
@@ -62,7 +62,7 @@ public class BugReportStrategy : CalculationStrategy
     }
 }
 
-public class ServiceRequestStrategy : CalculationStrategy
+public class ServiceRequestStrategy : CalculationStrategy //NEW
 {
     public void ResponseDeadline(TicketPriority ticketPriority, ServiceLevelAgreement sla)
     {
@@ -74,7 +74,7 @@ public class ServiceRequestStrategy : CalculationStrategy
     }
 }
 
-public class ServiceLevelAgreement
+public class ServiceLevelAgreement //NEW
 {
     // Recorded in hours stored as an int for this assessment 
     public int ResponseDeadline { get; set; } // When the ticket needs to be assigned
@@ -100,12 +100,12 @@ public class ServiceRequest : Ticket //NEW
 
 }
 
-public abstract class ServiceDecorator : ServiceRequest
+public abstract class ServiceDecorator : ServiceRequest //NEW
 {
     public ServiceRequest ServiceRequest { get; set; }
 } 
 
-public class ComputerOnFireDecorator : ServiceDecorator
+public class ComputerOnFireDecorator : ServiceDecorator //NEW
 {
     public ComputerOnFireDecorator(ServiceRequest serviceRequest)
     {
